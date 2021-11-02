@@ -40,7 +40,7 @@ function SignUp() {
   }
 
   return (
-    <main>
+    <main className="main-sign-up">
       <div className="container-left">
         <form onSubmit={handleSubmit}>
 

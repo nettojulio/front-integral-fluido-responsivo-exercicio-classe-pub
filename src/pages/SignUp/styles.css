@@ -43,3 +43,18 @@ main div {
 .login-link span {
   margin-left: 10px;
 }
+
+@media only screen and (min-width: 300px) {
+  .container-left form {
+    max-width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main-sign-up {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

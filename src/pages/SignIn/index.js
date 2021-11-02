@@ -37,7 +37,7 @@ function SignIn() {
   }
 
   return (
-    <main>
+    <main className="main-sign-in">
       <div
         style={{
           backgroundImage: `url(${LoginBackground})`,
