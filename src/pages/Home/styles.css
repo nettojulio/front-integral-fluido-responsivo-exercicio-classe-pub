@@ -6,8 +6,11 @@
 }
 
 .content-home {
-  margin-top: 40px;
-  width: 80%;
+  /* margin-top: 40px;
+  width: 80%; */
+
+  margin: 40px 20px 0;
+  width: 100%;
 }
 
 .btn-adicionar {

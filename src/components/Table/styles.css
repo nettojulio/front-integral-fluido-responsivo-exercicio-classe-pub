@@ -3,7 +3,8 @@
 }
 
 .header-table {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 46px;
   background: #f4f0f0;
@@ -12,7 +13,7 @@
 }
 
 .header-table strong {
-  width: 25%;
+  /* width: 25%; */
 }
 
 .body-table {
@@ -23,12 +24,12 @@
 .line-table {
   display: flex;
   align-items: center;
-  height: 46px;
+  /* height: 46px; */
   background: #fffafa;
   text-align: left;
   position: relative;
   margin-bottom: 8px;
-  padding: 0 24px;
+  padding: 24px;
 }
 
 .line-table:first-child {
@@ -54,42 +55,34 @@
   margin-right: 8px;
 }
 
-@media only screen and (min-width: 300px) {
-  .container-table {
-  }
-
-  .body-table {
-  }
-
-  .line-table {
-  }
-
-  .line-table > span {
-  }
-}
-
 @media only screen and (max-width: 800px) {
   .container-table {
-    min-width: auto;
-    outline: 1px crimson dashed;
-    overflow: scroll;
+    width: auto;
+    overflow-y: auto;
   }
 
-  .header-table {
-    width: 100%;
-  }
-
-  .header-table > strong {
-  }
-
-  .body-table {
-    width: 100%;
-  }
-
+  .header-table,
+  .body-table,
   .line-table {
-    width: 100%;
+    width: fit-content;
   }
 
-  .line-table > span {
+  .line-table span,
+  .header-table strong {
+    min-width: 20rem;
+  }
+
+  .line-table span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .action-buttons {
+    display: flex;
+    position: relative;
+  }
+
+  .action-buttons img:first-child {
+    margin: 0 0 0 10px;
   }
 }
