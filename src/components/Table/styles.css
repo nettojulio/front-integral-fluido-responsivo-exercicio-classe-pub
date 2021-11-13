@@ -3,17 +3,16 @@
 }
 
 .header-table {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   align-items: center;
   height: 46px;
-  background: #f4f0f0;
+  background: #F4F0F0;
   text-align: left;
   padding: 0 24px;
 }
 
 .header-table strong {
-  /* width: 25%; */
+  width: 25%;
 }
 
 .body-table {
@@ -24,12 +23,12 @@
 .line-table {
   display: flex;
   align-items: center;
-  /* height: 46px; */
-  background: #fffafa;
+  height: 46px;
+  background: #FFFAFA;
   text-align: left;
   position: relative;
   margin-bottom: 8px;
-  padding: 24px;
+  padding: 0 24px;
 }
 
 .line-table:first-child {
@@ -43,7 +42,7 @@
 .action-buttons {
   display: flex;
   position: absolute;
-  right: 32px;
+  right: 32px
 }
 
 .action-buttons img {
@@ -57,29 +56,26 @@
 
 @media only screen and (max-width: 800px) {
   .container-table {
-    width: auto;
     overflow-y: auto;
   }
 
   .header-table,
   .body-table,
-  .line-table {
-    width: fit-content;
-  }
-
-  .line-table span,
+  .line-table,
   .header-table strong {
-    min-width: 20rem;
+    width: 60rem;
   }
-
+ 
   .line-table span {
+    width: 40rem;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .action-buttons {
     display: flex;
-    position: relative;
+    position: absolute;
+    right: 0;
   }
 
   .action-buttons img:first-child {
